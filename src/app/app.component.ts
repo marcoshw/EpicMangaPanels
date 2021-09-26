@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import {SupabaseService} from "./services/supabase.service";
+
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'epicMangaPanels';
+  randomPanel: any;
+
+  constructor(private readonly supabase: SupabaseService){
+
+  }
+  async ngOnInit(){
+
+
+    this.randomPanel =  await this.supabase.profile()
+    console.log(this.randomPanel)
+
+
+  }
 }
