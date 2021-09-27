@@ -10,9 +10,9 @@
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="#">Home</a>
         </li>
-        <li class="nav-item">
+        <!-- <li class="nav-item">
           <a class="nav-link" href="#">Mangas</a>
-        </li>
+        </li> -->
         <!-- <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Dropdown
@@ -28,10 +28,10 @@
           <a class="nav-link disabled">Disabled</a>
         </li> -->
       </ul>
-      <form class="d-flex">
+      <!-- <form class="d-flex">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-warning" type="submit">Search</button>
-      </form>
+      </form> -->
     </div>
   </div>
 </nav>
@@ -40,7 +40,9 @@
 <div class="container-fluid">
   <br>
   <div class="row">
-    <div class="col"></div>
+    <div class="col">
+      <button (click)="randomize()" type="button" class="btn btn-secondary">Randomize</button>
+    </div>
     <div class="col">
       <h5>
         <img height="55vh" [src]="randomPanel.Mangas.url_cover" />

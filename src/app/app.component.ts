@@ -21,4 +21,8 @@ export class AppComponent {
 
 
   }
+
+  randomize(){
+    window.location.reload();
+  }
 }
